@@ -7,6 +7,7 @@ PORT = 33333
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 s.bind((HOST, PORT))
+print("UDP Server listening to {0}:{1}".format(HOST, PORT))
 
 while True:
     received = s.recvfrom(4096)
